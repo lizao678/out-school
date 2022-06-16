@@ -1,0 +1,20 @@
+.GreenCode{
+    margin-top: 5.648vw;
+    letter-spacing:1.389vw;
+    .midWord{
+        height: 4.63vw;
+        font-weight: 500;
+        text-align: center;
+        font-size: 4.63vw;
+    }
+    .imgGreen {
+        margin-top: 6.574vw;
+        width: 100vw;
+        & > img{
+            width: 69.815vw;
+            height: 70.648vw;
+            display: block;
+            margin: auto;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.Header{
+    position: relative;
+    width: 92.037vw;
+    height: 55.556vw;
+    margin: 3.981vw auto 0;
+    background: url('@/assets/header@2x.webp') no-repeat;
+    background-size: 100%;
+    .outTime{
+        position: absolute;
+        bottom: 7.454vw;
+        left: 37.87vw;
+        color: #f9fbfc;
+        font-size: 3.704vw;
+        & > li {
+            display: inline-block;
+            margin-right: 1.389vw;
+        }
+    }
+}
