@@ -1,21 +1,22 @@
-import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import Header from './components/Header'
-import MainDate from './components/MainDate'
-import Green from './components/Green'
-import Footer from './components/Footer'
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Login from './pages/Login'
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className='App'>
-      <Header />
-      <MainDate />
-      <Green />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className='App'>
+        <Routes>
+          <Route path='/home' element={<Home />}></Route>
+          <Route index element={<Login />}></Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
+
   )
 }
 

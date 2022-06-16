@@ -1,13 +1,14 @@
 import React from 'react'
 import './index.scss'
 
-export default function Header() {
+export default function Header(props) {
+    const { outDay, outDate, inDay, inDate } = JSON.parse(props.timeData)
     return (
         <div className='Header'>
             <ul className='outTime'>
-                <li>6-18</li>
-                <li>12:00-6-21</li>
-                <li>12:00</li>
+                <li>{outDay}</li>
+                <li>{outDate}-{inDay}</li>
+                <li>{inDate}</li>
             </ul>
         </div>
     )

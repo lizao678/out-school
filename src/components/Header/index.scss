@@ -6,14 +6,17 @@
     background: url('@/assets/header@2x.webp') no-repeat;
     background-size: 100%;
     .outTime{
+        margin: 0;
         position: absolute;
-        bottom: 7.454vw;
+        bottom: 7.4vw;
         left: 37.87vw;
-        color: #f9fbfc;
+        color: #ededed;
+        // text-shadow: 1px 1px 2px #ddd;
         font-size: 3.704vw;
         & > li {
             display: inline-block;
             margin-right: 1.389vw;
+            letter-spacing:.37vw;
         }
     }
 }
