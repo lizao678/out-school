@@ -28,7 +28,7 @@ export default function MainDate() {
         setMDobj(timeData())
         const timer = setInterval(() => {
             setMDobj(timeData())
-        }, 800)
+        }, 1000)
         return () => {
             clearInterval(timer)
         }

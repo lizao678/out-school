@@ -105,10 +105,11 @@ export default function Login() {
                     >
                         <Input />
                     </Form.Item>
-
                 </Form>
-
-            </Card>
-        </div>
+                <div style={{ fontSize: '3.704vw', textAlign: 'center' }}>
+                    皮皮章出品，仅供学习使用
+                </div>
+            </Card >
+        </div >
     )
 }
