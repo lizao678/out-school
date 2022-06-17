@@ -26,21 +26,30 @@ function App() {
         setPreNum(((i + 1) / len * 100))
       }
     }
-
+    const timer = setTimeout(() => {
+      if (preNum < 100) {
+        setPreNum(100)
+      }
+    }, 2000)
+    return () => {
+      clearTimeout(timer)
+    }
   }, [])
 
   return (
     <BrowserRouter>
-      <Mask visible={preNum !== 100} color='white' onMaskClick={() => setPreNum(100)} >
+      <Mask visible={preNum !== 100} color='white' >
         < div
           style={{
             textAlign: 'center',
             marginTop: 200,
-            color: '#07a'
+            color: '#07a',
+            fontSize: '2.778vw',
+            fontWeight: '500'
           }}
         >
+          <span>Loading {preNum + '%'}</span>
           <DotLoading color='primary' />
-          <span>Loading {preNum + '%'}...</span>
         </div >
       </Mask>
       <Suspense

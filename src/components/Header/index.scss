@@ -15,17 +15,17 @@
     }
     .stuNum{
         position: absolute;
-        top: 16.8vw;
+        top: 16.5vw;
         left: 24.722vw;
     }
     .outTime{
         margin: 0;
         position: absolute;
-        bottom: 7.4vw;
+        bottom: 7.5vw;
         left: 37.87vw;
         & > li {
             display: inline-block;
-            margin-right: 1.389vw;
+            margin-right: 1vw;
             letter-spacing:.37vw;
         }
     }
