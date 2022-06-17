@@ -38,13 +38,36 @@ export default function Login() {
                     }
                 >
                     <Form.Header>请输入离校时间：</Form.Header>
-                    {/*   <Form.Item
-                        name='name'
-                        label='姓名'
-                        rules={[{ required: true, message: '姓名不能为空' }]}
+                    <Form.Item
+                        label="姓名"
+                        name="stuName"
+                        initialValue="张泸月"
+                        rules={[
+                            { required: true, message: '不能为空' },
+                            {
+                                pattern: /^[\u4e00-\u9fa5]{0,}$/,
+                                message: '请输入汉字,中间不要有空格',
+                                validateTrigger: 'onBlur' // 触发这个正则的事件
+                            }
+                        ]}
                     >
-                        <Input onChange={console.log} placeholder='请输入姓名' />
-                    </Form.Item> */}
+                        <Input />
+                    </Form.Item>
+                    <Form.Item
+                        label="学号"
+                        name="stuNum"
+                        initialValue="1815041038"
+                        rules={[
+                            { required: true, message: '不能为空' },
+                            {
+                                pattern: /^[0-9]+$/,
+                                message: '输入格式为数字,中间不要有空格',
+                                validateTrigger: 'onBlur' // 触发这个正则的事件
+                            }
+                        ]}
+                    >
+                        <Input />
+                    </Form.Item>
                     <Form.Item
                         label="离校日期"
                         name="outDay"
@@ -52,7 +75,7 @@ export default function Login() {
                         rules={[
                             { required: true, message: '不能为空' },
                             {
-                                pattern: /([0-9]{1,2})+\-[0-9]{1,2}/,
+                                pattern: /^([0-9]{1,2})+\-[0-9]{1,2}$/,
                                 message: '输入格式为XX-XX,中间不要有空格',
                                 validateTrigger: 'onBlur' // 触发这个正则的事件
                             }
@@ -67,7 +90,7 @@ export default function Login() {
                         rules={[
                             { required: true, message: '不能为空' },
                             {
-                                pattern: /([0-9]{2})+\:[0-9]{2}/,
+                                pattern: /^([0-9]{2})+\:[0-9]{2}$/,
                                 message: '输入格式为XX:XX,中间不要有空格',
                                 validateTrigger: 'onBlur' // 触发这个正则的事件
                             }
@@ -82,7 +105,7 @@ export default function Login() {
                         rules={[
                             { required: true, message: '不能为空' },
                             {
-                                pattern: /([0-9]{2})+\-[0-9]{2}/,
+                                pattern: /^([0-9]{2})+\-[0-9]{2}$/,
                                 message: '输入格式为XX-XX,中间不要有空格',
                                 validateTrigger: 'onBlur' // 触发这个正则的事件
                             }
@@ -97,7 +120,7 @@ export default function Login() {
                         rules={[
                             { required: true, message: '不能为空' },
                             {
-                                pattern: /([0-9]{2})+\:[0-9]{2}/,
+                                pattern: /^([0-9]{2})+\:[0-9]{2}$/,
                                 message: '输入格式为XX:XX,中间不要有空格',
                                 validateTrigger: 'onBlur' // 触发这个正则的事件
                             }

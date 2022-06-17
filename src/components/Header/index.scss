@@ -3,16 +3,26 @@
     width: 92.037vw;
     height: 55.556vw;
     margin: 3.981vw auto 0;
-    background: url('@/assets/header@2x.webp') no-repeat;
+    background: url('@/assets/nullheader@2x.webp') no-repeat;
     background-size: 100%;
+    color: #ededed;
+    // text-shadow: 1px 1px 2px #ddd;
+    font-size: 3.704vw;
+    .stuName{
+        position: absolute;
+        top: 23.3vw;
+        left: 21.019vw;
+    }
+    .stuNum{
+        position: absolute;
+        top: 16.8vw;
+        left: 24.722vw;
+    }
     .outTime{
         margin: 0;
         position: absolute;
         bottom: 7.4vw;
         left: 37.87vw;
-        color: #ededed;
-        // text-shadow: 1px 1px 2px #ddd;
-        font-size: 3.704vw;
         & > li {
             display: inline-block;
             margin-right: 1.389vw;
