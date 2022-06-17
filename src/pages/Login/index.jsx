@@ -23,7 +23,7 @@ export default function Login() {
     return (
         <div className='Login'>
             <Card
-                title="设置时间"
+                title="离校报备"
                 bordered={false}
                 className='loginCard'
             >
@@ -37,7 +37,7 @@ export default function Login() {
                         </Button>
                     }
                 >
-                    <Form.Header>请输入离校时间：</Form.Header>
+                    <Form.Header>请填写以下信息：</Form.Header>
                     <Form.Item
                         label="姓名"
                         name="stuName"
