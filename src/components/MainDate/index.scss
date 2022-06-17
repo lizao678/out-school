@@ -1,15 +1,18 @@
 .MainDate{
-    margin-top: 11.019vw;
-    font-size: 8.333vw;
+    margin-top: 10.185vw;
+    line-height: 8.796vw;
+    font-size: 8.796vw;
     font-weight: 700;
-    display: flex;
-    letter-spacing:1.852vw;
+    // display: flex;
+    letter-spacing:1.389vw;
     .leftDate{
-        width: 32.593vw;
+        float: left;
+        // width: 32.593vw;
         margin-left: 6.667vw;
     }
     .rightDate{
         width: 46.944vw;
-        margin-left: 5.093vw;
+        margin-left: 44.352vw;
     }
+    
 }

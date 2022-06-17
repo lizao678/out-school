@@ -36,7 +36,7 @@ export default function MainDate() {
 
     const { month, today, hours, minutes, seconds } = MDobj
     return (
-        <div className='MainDate'>
+        <div className='MainDate clearfix'>
             <div className="leftDate">
                 {`${month}-${today}`}
             </div>
