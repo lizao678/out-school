@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "echo outschool.lizao123.xyz > ./dist/CNAME && gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "analyze": "source-map-explorer 'dist/assets/*.js'"
   },
   "dependencies": {
     "antd-mobile": "^5.15.0",
@@ -24,8 +25,12 @@
     "gh-pages": "^4.0.0",
     "less": "^4.1.3",
     "sass": "^1.52.3",
+    "source-map-explorer": "^2.5.2",
     "vite": "^2.9.9",
     "vite-plugin-compression": "^0.5.1",
-    "vite-plugin-imp": "^2.2.0"
+    "vite-plugin-imagemin": "^0.6.1"
+  },
+  "resolutions": {
+    "bin-wrapper": "npm:bin-wrapper-china"
   }
 }

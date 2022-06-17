@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 // import vitePluginImp from 'vite-plugin-imp'
 import path from 'path'
 import viteCompression from 'vite-plugin-compression';
+import viteImagemin from 'vite-plugin-imagemin'
 
 
 // https://vitejs.dev/config/
@@ -16,16 +17,28 @@ export default defineConfig({
     deleteOriginFile: false, // 压缩后是否删除源文件
     // filter: 接收一个正则，指定哪些资源不压缩
   }),
-    /* vitePluginImp({
-      libList: [
-        {
-          libName: "antd",
-          style: (name) => `antd/es/${name}/style`,
-        },
-      ],
-    }), */
+  viteImagemin({
+    verbose: true,
+    gifsicle: {
+      optimizationLevel: 7,
+      interlaced: false,
+    },
+    optipng: {
+      optimizationLevel: 7,
+    },
+    mozjpeg: {
+      quality: 20,
+    },
+    pngquant: {
+      quality: [0.5, 0.8],
+      speed: 4,
+    }
+  })
   ],
   base: './',
+  build: {
+    sourcemap: true
+  },
   css: {
     preprocessorOptions: {
       less: {

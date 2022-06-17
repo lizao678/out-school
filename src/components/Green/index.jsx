@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.scss'
-import greenImg from '@/assets/green@2x.webp'
+import greenImg from '@/assets/green.png'
 
 export default function Green() {
     return (

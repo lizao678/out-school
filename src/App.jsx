@@ -1,17 +1,48 @@
 import logo from './logo.svg'
 import './App.css'
-import { Suspense, lazy } from 'react'
+import { Suspense, lazy, useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { DotLoading } from 'antd-mobile'
+import { DotLoading, Mask } from 'antd-mobile'
+import nullheader from '@/assets/nullheader.png'
+import green from '@/assets/green.png'
+import { useState } from 'react'
 
 
 const Home = lazy(() => import('@/pages/Home'))
 const Login = lazy(() => import('@/pages/Login'))
 
-
 function App() {
+  const [preNum, setPreNum] = useState(0)
+  useEffect(() => {
+    const urlList = [
+      nullheader,
+      green
+    ]
+    const len = urlList.length
+    for (let i = 0; i < len; i++) {
+      const img = new Image()
+      img.src = urlList[i]
+      img.onload = img.onerror = () => {
+        setPreNum(((i + 1) / len * 100))
+      }
+    }
+
+  }, [])
+
   return (
     <BrowserRouter>
+      <Mask visible={preNum !== 100} color='white' onMaskClick={() => setPreNum(100)} >
+        < div
+          style={{
+            textAlign: 'center',
+            marginTop: 200,
+            color: '#07a'
+          }}
+        >
+          <DotLoading color='primary' />
+          <span>Loading {preNum + '%'}...</span>
+        </div >
+      </Mask>
       <Suspense
         fallback={
           < div
