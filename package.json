@@ -1,7 +1,7 @@
 {
   "name": "out-school",
   "private": true,
-  "version": "0.0.0",
+  "version": "3.0.0",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "echo outschool.lizao123.xyz > ./dist/CNAME && gh-pages -d dist",

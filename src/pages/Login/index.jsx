@@ -17,6 +17,18 @@ export default function Login() {
         navigate(`/home?value=${JSON.stringify(values)}`)
     };
 
+    const strDate = (date) => {
+        const month = date.getMonth() + 1,
+            day = date.getDate()
+        return `${month < 10 ? '0' + month : month
+            }-${day < 10 ? '0' + day : day}`
+    }
+
+    const date = new Date(),
+        leaveDate = strDate(date)
+    date.setDate(date.getDate() + 1)
+    const backDate = strDate(date)
+
     /*  const onFinishFailed = (errorInfo) => {
          console.log('Failed:', errorInfo);
      }; */
@@ -51,7 +63,7 @@ export default function Login() {
                             }
                         ]}
                     >
-                        <Input />
+                        <Input clearable />
                     </Form.Item>
                     <Form.Item
                         label="学号"
@@ -66,12 +78,12 @@ export default function Login() {
                             }
                         ]}
                     >
-                        <Input />
+                        <Input clearable />
                     </Form.Item>
                     <Form.Item
                         label="离校日期"
                         name="outDay"
-                        initialValue="06-18"
+                        initialValue={leaveDate}
                         rules={[
                             { required: true, message: '不能为空' },
                             {
@@ -81,7 +93,7 @@ export default function Login() {
                             }
                         ]}
                     >
-                        <Input />
+                        <Input clearable />
                     </Form.Item>
                     <Form.Item
                         label="离校时间"
@@ -96,12 +108,12 @@ export default function Login() {
                             }
                         ]}
                     >
-                        <Input />
+                        <Input clearable />
                     </Form.Item>
                     <Form.Item
                         label="返校日期"
                         name="inDay"
-                        initialValue="06-21"
+                        initialValue={backDate}
                         rules={[
                             { required: true, message: '不能为空' },
                             {
@@ -111,7 +123,7 @@ export default function Login() {
                             }
                         ]}
                     >
-                        <Input />
+                        <Input clearable />
                     </Form.Item>
                     <Form.Item
                         label="返校时间"
@@ -126,7 +138,7 @@ export default function Login() {
                             }
                         ]}
                     >
-                        <Input />
+                        <Input clearable />
                     </Form.Item>
                 </Form>
             </Card >
