@@ -30,14 +30,14 @@ export default defineConfig({
       quality: 20,
     },
     pngquant: {
-      quality: [0.5, 0.8],
+      quality: [0.2, 0.5],
       speed: 4,
     }
   })
   ],
   base: './',
   build: {
-    sourcemap: true
+    // sourcemap: true
   },
   css: {
     preprocessorOptions: {

@@ -1,4 +1,3 @@
-import React from 'react'
 import {
     Card,
     Form,
@@ -8,14 +7,13 @@ import {
 
 import { useNavigate } from 'react-router-dom';
 
-
 import './index.scss'
 
 export default function Login() {
-    const navigate = useNavigate()
-    const onFinish = (values) => {
-        navigate(`/home?value=${JSON.stringify(values)}`)
-    };
+    const navigate = useNavigate(),
+        onFinish = (values) => {
+            navigate(`/home?value=${JSON.stringify(values)}`)
+        };
 
     const strDate = (date) => {
         const month = date.getMonth() + 1,
@@ -32,6 +30,8 @@ export default function Login() {
     /*  const onFinishFailed = (errorInfo) => {
          console.log('Failed:', errorInfo);
      }; */
+
+
     return (
         <div className='Login'>
             <Card
@@ -94,6 +94,7 @@ export default function Login() {
                         ]}
                     >
                         <Input clearable />
+
                     </Form.Item>
                     <Form.Item
                         label="离校时间"
